@@ -32,7 +32,7 @@ function peco-cd {
   cd "$( ghq list --full-path | peco)"
 }
 
-gcp() {
+pg() {
   git branch -a --sort=-authordate |
     grep -v -e '->' -e '*' |
     perl -pe 's/^\h+//g' |
@@ -61,7 +61,6 @@ alias cdml='cdm; cd latour'
 alias tk='tmux kill-session'
 alias ga='git add .'
 alias gc='git commit -m'
-alias gp='git push origin'
 alias ts='cd; tmux source ~/.tmux.conf; cp -pr .tmux.conf ~/.tmux'
 alias zs='cd; source ~/.zshrc; cp -pr ~/.zshrc ~/.tmux'
 alias spec='docker-compose exec spring spring rspec'
