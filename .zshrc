@@ -6,6 +6,7 @@ export PATH="./node_modules/.bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH=~/.local/bin:$PATH
+export PATH="$HOME/.cargo/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"; fi
 export PATH="/usr/local/sbin:$PATH"
@@ -61,8 +62,14 @@ alias cdml='cdm; cd latour'
 alias tk='tmux kill-session'
 alias ga='git add .'
 alias gc='git commit -m'
+alias gch='git checkout'
 alias ts='cd; tmux source ~/.tmux.conf; cp -pr .tmux.conf ~/.tmux'
 alias zs='cd; source ~/.zshrc; cp -pr ~/.zshrc ~/.tmux'
 alias spec='docker-compose exec spring spring rspec'
 alias py='python'
 alias e='exit'
+alias rubocop='docker-compose exec server rubocop --auto-correct'
+alias ml='cd; cd desktop/MLproject'
+alias gd="gatsby develop"
+
+export PATH="/Users/poteboy/elrondsdk:$PATH"	# elrond-sdk
