@@ -71,5 +71,6 @@ alias e='exit'
 alias rubocop='docker-compose exec server rubocop --auto-correct'
 alias ml='cd; cd desktop/MLproject'
 alias gd="gatsby develop"
-
+alias nd="npm rud develop"
+alias gph="git push origin HEAD"
 export PATH="/Users/poteboy/elrondsdk:$PATH"	# elrond-sdk
