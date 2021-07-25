@@ -5,10 +5,11 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH="./node_modules/.bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init --path)"
+fi
 export PATH=~/.local/bin:$PATH
 export PATH="$HOME/.cargo/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"; fi
 export PATH="/usr/local/sbin:$PATH"
 export PGDATA=/usr/local/var/postgres
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -71,6 +72,6 @@ alias e='exit'
 alias rubocop='docker-compose exec server rubocop --auto-correct'
 alias ml='cd; cd desktop/MLproject'
 alias gd="gatsby develop"
-alias nd="npm rud develop"
+alias nd="npm run develop"
 alias gph="git push origin HEAD"
 export PATH="/Users/poteboy/elrondsdk:$PATH"	# elrond-sdk
